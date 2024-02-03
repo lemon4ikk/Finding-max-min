@@ -51,11 +51,11 @@ int main() {
             cout << "Данные в файле!";
             file << "\n";
 
-            file << "\n" << "Maximum; value: ;" << max << "\n";
-            file << "Maximum; value; index: ;" << indmax << "\n";
+            file << "\n" << "Maximum; value: ;" << max << "\n";             //Вывод максимального значения
+            file << "Maximum; value; index: ;" << indmax << "\n";           //Вывод  индекса максимального значения
 
-            file << "\n" << "Minimum; value: ;" << min << "\n";
-            file << "Minimum; value; index: ;" << indmin <<"\n";
+            file << "\n" << "Minimum; value: ;" << min << "\n";             //Вывод минимального значения
+            file << "Minimum; value; index: ;" << indmin <<"\n";            //Вывод индекса минимального значения
         }
 
         file.close();
