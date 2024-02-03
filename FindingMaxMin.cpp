@@ -16,7 +16,7 @@ int main() {
     char path[] = "Data.csv";
 
     fstream file;                                                       //Объявление класса fstream и объекта file
-        file.open(path, fstream::in | fstream::out | fstream::trunc);                                  
+        file.open(path, fstream::trunc | fstream::in | fstream::out);                                  
 
         if (!file.is_open())                                            //Проверка условия успешного открытия файла
         {
@@ -55,7 +55,7 @@ int main() {
             file << "Maximum; value; index: ;" << indmax << "\n";           //Вывод  индекса максимального значения
 
             file << "\n" << "Minimum; value: ;" << min << "\n";             //Вывод минимального значения
-            file << "Minimum; value; index: ;" << indmin <<"\n";            //Вывод индекса минимального значения
+            file << "Minimum; value; index: ;" << indmin <<"\n";        //Вывод индекса минимального значения
         }
 
         file.close();
