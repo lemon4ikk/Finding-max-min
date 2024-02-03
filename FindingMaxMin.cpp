@@ -28,7 +28,7 @@ int main() {
                 for (int i = 0; i < size; i++) 
                 {
                     data[i] = rand() % 100;
-                    file << data[i] << ";";
+                    file << data[i] << "\n";
                 }
 
                 max = data[0];
@@ -51,11 +51,13 @@ int main() {
             cout << "Данные в файле!";
             file << "\n";
 
-            file << "\n" << "Maximum; value: ;" << max << "\n";             //Вывод максимального значения
-            file << "Maximum; value; index: ;" << indmax << "\n";           //Вывод  индекса максимального значения
+            file << "Maximum value: " << max << "\n";             //Вывод максимального значения
+            file << "Maximum value index: " << indmax << "\n";   //Вывод индекса максимального значения
 
-            file << "\n" << "Minimum; value: ;" << min << "\n";             //Вывод минимального значения
-            file << "Minimum; value; index: ;" << indmin <<"\n";        //Вывод индекса минимального значения
+            file << "\n";
+
+            file << "Minimum value: " << min << "\n";             //Вывод минимального значения
+            file << "Minimum value index: " << indmin <<"\n";    //Вывод индекса минимального значения
         }
 
         file.close();
