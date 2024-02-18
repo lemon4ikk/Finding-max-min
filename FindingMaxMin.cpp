@@ -14,11 +14,11 @@ int main() {
     int data[size];
     
     char path[] = "Data.csv";
-    char path2[] = "resaults.txt";
+    char path2[] = "results.txt";
 
-    fstream file, resaults;                                                       //Объявление класса fstream, объекта file и объекта resaults
+    fstream file, results;                                                       //Объявление класса fstream, объекта file и объекта resaults
         file.open(path, fstream::trunc | fstream::in | fstream::out);      
-        resaults.open(path2, fstream::trunc | fstream::in | fstream::out);                          
+        results.open(path2, fstream::trunc | fstream::in | fstream::out);                          
 
         if (!file.is_open())                                                      //Проверка условия успешного открытия файла
         {
@@ -36,22 +36,25 @@ int main() {
                 max = data[0];
                 min = data[0];
 
+                indmax = 0;
+                indmin = 0;
+
                 for (int i = 1; i < size; i++) {
                     if (data[i] > max) 
                     {
                         max = data[i];
-                        indmax = i+1;
+                        indmax = i;
                     }
 
                     if (data[i] < min) 
                     {
                         min = data[i];
-                        indmin = i+1;
+                        indmin = i;
                     }
                 }
         }
 
-    if (!resaults.is_open())                                        //Проверка условия успешного открытия файла
+    if (!results.is_open())                                        //Проверка условия успешного открытия файла
         {
             cout << "Ошибка открытия файла!" << endl;
         }                                                               
@@ -59,17 +62,17 @@ int main() {
         {
             cout << "Данные в файле!";
 
-            resaults << "Maximum value: " << max << "\n";               //Вывод максимального значения
-            resaults << "Maximum value index: " << indmax << "\n";      //Вывод индекса максимального значения
+            results << "Maximum value: " << max << "\n";               //Вывод максимального значения
+            results << "Maximum value index: " << indmax + 1 << "\n";      //Вывод индекса максимального значения
 
-            resaults << "\n";
+            results << "\n";
 
-            resaults << "Minimum value: " << min << "\n";               //Вывод минимального значения
-            resaults << "Minimum value index: " << indmin <<"\n";       //Вывод индекса минимального значения
+            results << "Minimum value: " << min << "\n";               //Вывод минимального значения
+            results << "Minimum value index: " << indmin + 1 <<"\n";       //Вывод индекса минимального значения
         }
 
         file.close();
-        resaults.close();
+        results.close();
 
     return 0;
 }

@@ -1,5 +1,0 @@
-Maximum value: 99
-Maximum value index: 88
-
-Minimum value: 0
-Minimum value index: 72
