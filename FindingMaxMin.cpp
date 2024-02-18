@@ -1,13 +1,14 @@
+#include <stdlib.h>
 #include <iostream>
 #include <fstream>
-#include <ctime>
+// #include <ctime>
 
 using namespace std;
 
 int main() {
     setlocale(LC_ALL, "ru");
 
-    srand(time(NULL));
+    srand(1234);
 
     const int size = 128;
     int max, min, indmax, indmin;
