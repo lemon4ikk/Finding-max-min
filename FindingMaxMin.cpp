@@ -20,7 +20,7 @@ int main() {
         file.open(path, fstream::trunc | fstream::in | fstream::out);      
         results.open(path2, fstream::trunc | fstream::in | fstream::out);                          
 
-        if (!file.is_open())                                                      //Проверка условия успешного открытия файла
+        if (!file.is_open())                                                      //Проверка  условия успешного открытия файла
         {
             cout << "Ошибка открытия файла!" << endl;
         }                                                               
