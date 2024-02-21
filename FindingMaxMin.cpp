@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <iostream>
 #include <fstream>
-// #include <ctime>
 
 using namespace std;
 
@@ -61,8 +60,6 @@ int main() {
         }                                                               
         else 
         {
-            cout << "Данные в файле!";
-
             results << "Maximum value: " << max << "\n";               //Вывод максимального значения
             results << "Maximum value index: " << indmax + 1 << "\n";      //Вывод индекса максимального значения
 
@@ -70,6 +67,8 @@ int main() {
 
             results << "Minimum value: " << min << "\n";               //Вывод минимального значения
             results << "Minimum value index: " << indmin + 1 <<"\n";       //Вывод индекса минимального значения
+
+            cout << "Данные в файле!";
         }
 
         file.close();
