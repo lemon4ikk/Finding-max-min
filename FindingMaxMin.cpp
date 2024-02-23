@@ -5,22 +5,22 @@
 using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "ru");
+    setlocale(LC_ALL, "ru");    //RU локализация консоли
 
-    srand(1234);
+    srand(1234);    // инициализация генератора псевдослучайных чисел
 
-    const int size = 128;
-    int max, min, indmax, indmin;
+    const int size = 128;   // инициализация константы которая отвечает за размер массива
+    int max, min, indmax, indmin;   // инициализация перемнных, которые будут хранить максимальный и мнимальный элеиенты массива, и их индексы соответственно
     int data[size];
     
-    char path[] = "Data.csv";
+    char path[] = "Data.csv";   
     char path2[] = "results.txt";
 
-    fstream file, results;                                                       //Объявление класса fstream, объекта file и объекта resaults
+    fstream file, results;                                                    //Объявление класса fstream, объекта file и объекта resaults
         file.open(path, fstream::trunc | fstream::in | fstream::out);      
         results.open(path2, fstream::trunc | fstream::in | fstream::out);                          
 
-        if (!file.is_open())                                                      //Проверка  условия успешного открытия файла
+        if (!file.is_open())        //Проверка  условия успешного открытия файла
         {
             cout << "Ошибка открытия файла!" << endl;
         }                                                               
@@ -33,10 +33,10 @@ int main() {
                     file << data[i] << "\n";
                 }
 
-                max = data[0];
+                max = data[0];              //Задание начальных значений для переменных максимального и минимального элементов
                 min = data[0];
 
-                indmax = 0;
+                indmax = 0;                 //Задание начальных значений для переменных индексов максимального и минимального элементов
                 indmin = 0;
 
                 for (int i = 1; i < size; i++) {
